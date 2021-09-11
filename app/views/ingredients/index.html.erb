@@ -1,0 +1,16 @@
+<div class="form-group shadow-lg" style="display: flex; justify-content: center; align-items: center; width: 50%; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+  <%= form_with url: "/update_inventory", method: "put" do |form| %>
+    <h3 class="form-label" style="text-align:center; padding: 10px">
+      <strong>Update Inventory</strong>
+    </h3>
+    <%= form.label :ing_name, "Name of Ingredient", class: "form-label" %>
+    <%= form.select :name, @ingredients.pluck(:name), {include_blank: "Select ingredient"}, { class: "form-control", required: true } %>
+    <%= form.label :ing_quantity, "Quantity", class: "form-label" %>
+    <%= form.number_field :available_units, min: 0, class: "form-control" %>
+    <%= form.label :ing_price, "Price", class: "form-label" %>
+    <%= form.number_field :price, min: 0, class: "form-control" %>
+    <div style="text-align: center; padding: 10px;">
+      <%= form.submit %>
+    </div>
+  <% end %>
+</div>
