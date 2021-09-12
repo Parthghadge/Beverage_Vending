@@ -1,24 +1,25 @@
-# README
+# The Vending Machine
+### Visit here: https://sleepy-springs-20376.herokuapp.com/
+The Vending Machine is a website to order beverages. The deployed version on heroku can be found [here](https://sleepy-springs-20376.herokuapp.com/).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Installation
 
-Things you may want to cover:
+Find the below steps to setup the project locally:
 
-* Ruby version
+* Install ruby version: 2.6.6 using [rvm](https://rvm.io/rvm/install)
 
-* System dependencies
+* Install postgresql and set the username and password as mentioned in the database.yml
 
-* Configuration
+* Clone the above repo and run bundle install
 
-* Database creation
+* Run `rails db:migrate`
 
-* Database initialization
+* Run `rails db:seed`
 
-* How to run the test suite
+* To start the server run `rails s`
 
-* Services (job queues, cache servers, search engines, etc.)
+* The Vending Machine should be up and running on `localhost:3000`
 
-* Deployment instructions
-
-* ...
+### Running tests
+Tests are handled by rspecs. To run rspecs run the following command:
+* `rspec ./spec`
