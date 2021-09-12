@@ -1,4 +1,4 @@
 class ComprisingIngredient < ApplicationRecord
-	belongs_to :beverage
-	belongs_to :ingredient
+  belongs_to :beverage
+  belongs_to :ingredient
 end
